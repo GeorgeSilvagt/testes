@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class Calculadora {
+
+	public static void main(String[] args) {
+		Scanner MyObj = new Scanner(System.in);
+		Menssagem("Faça varias operações entre dois numeros\n\n");
+		
+		Menssagem("Digite um numero: ");
+		double num1 = MyObj.nextInt();
+		
+		Menssagem("Digite outro numro: ");
+		double num2 = MyObj.nextInt();
+		
+		Menssagem("\n\n");
+		
+		Menssagem("A soma dos numeros e: " + Soma(num1, num2) + "\n");
+		Menssagem("A diferença entre os numeros e: " + Sub(num1, num2) + "\n");
+		Menssagem("A multiplicação entre os numeros e: " + mult(num1, num2) + "\n");
+		Menssagem("A divisão entre os numeros e: " + div(num1, num2) + "\n");
+		Menssagem("A media entre os numeros e: " + media(num1, num2) + "\n");
+		Menssagem("A potenciação do primeiro pelo segundo e: " + potencia(num1, num2) + "\n");
+		}
+	public static void Menssagem(String texto) {
+		System.out.print(" " + texto);
+	}
+	
+	public static double Soma (double num1, double num2) {
+		return (num1 + num2);
+	}
+	
+	public static double Sub (double num1, double num2) {
+		return(num1 - num2);
+	}
+	
+	public static double mult (double num1, double num2) {
+		return(num1 * num2);
+	}
+	public static double div (double num1, double num2) {
+		return(num1 / num2);
+	}
+	public static double media (double num1, double num2) {
+		double result = (num1 + num2) / 2;
+		return (result);
+	}
+	public static double potencia (double num1, double num2) {
+		return(Math.pow(num1, num2));
+    }
+	
+	
+}
